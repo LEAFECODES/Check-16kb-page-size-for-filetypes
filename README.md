@@ -27,7 +27,7 @@ Many basic checkers only verify the `p_align` field, but the Android dynamic lin
 
 ### Step 1: Download the Script
 
-Save the script as `check-16kb-alignment.ps1`
+Save the script as `leafy-check-16kb.ps1`
 
 ### Step 2: Install Android NDK
 
@@ -72,44 +72,44 @@ sdkmanager "ndk;27.0.12077973"
 
 **Interactive Mode** (Easiest - script will prompt you):
 ```powershell
-.\check-16kb-alignment.ps1
+.\leafy-check-16kb.ps1
 ```
 
 **Command Line Mode**:
 ```powershell
-.\check-16kb-alignment.ps1 -Path "C:\path\to\your\app.apk" -NdkPath "C:\Android\Sdk\ndk\27.0.0"
+.\leafy-check-16kb.ps1 -Path "C:\path\to\your\app.apk" -NdkPath "C:\Android\Sdk\ndk\27.0.0"
 ```
 
 **With Report Output**:
 ```powershell
-.\check-16kb-alignment.ps1 -Path ".\app.apk" -NdkPath ".\ndk\27.0.0" -ReportPath ".\report.txt"
+.\leafy-check-16kb.ps1 -Path ".\app.apk" -NdkPath ".\ndk\27.0.0" -ReportPath ".\report.txt"
 ```
 
 ## 📝 Usage Examples
 
 ### Check an APK
 ```powershell
-.\check-16kb-alignment.ps1 -Path "C:\MyApp\app-release.apk"
+.\leafy-check-16kb.ps1 -Path "C:\MyApp\app-release.apk"
 ```
 
 ### Check an AAB (Android App Bundle)
 ```powershell
-.\check-16kb-alignment.ps1 -Path "C:\MyApp\app-release.aab"
+.\leafy-check-16kb.ps1 -Path "C:\MyApp\app-release.aab"
 ```
 
 ### Check an AAR Library
 ```powershell
-.\check-16kb-alignment.ps1 -Path "C:\Libraries\mylibrary.aar"
+.\leafy-check-16kb.ps1 -Path "C:\Libraries\mylibrary.aar"
 ```
 
 ### Check a Directory of .so Files
 ```powershell
-.\check-16kb-alignment.ps1 -Path "C:\MyProject\jniLibs"
+.\leafy-check-16kb.ps1 -Path "C:\MyProject\jniLibs"
 ```
 
 ### Check a Single .so File
 ```powershell
-.\check-16kb-alignment.ps1 -Path "C:\MyProject\arm64-v8a\libmyapp.so"
+.\leafy-check-16kb.ps1 -Path "C:\MyProject\arm64-v8a\libmyapp.so"
 ```
 
 ## 📊 Understanding the Output
@@ -210,7 +210,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Ensure you're in the correct directory:
 ```powershell
 cd C:\path\to\script
-.\check-16kb-alignment.ps1
+.\leafy-check-16kb.ps1
 ```
 
 ### No .so Files Found
